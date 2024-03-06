@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+#form{
+    bottom: 55px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -17,6 +21,9 @@ body {
 }
 
 #intro {
+    position: relative;
+    bottom: 150px;
+    left: 155px;
     text-align: center;
     margin-bottom: 30px; /* Adjust the margin-bottom for the gap */
 }
@@ -50,6 +57,9 @@ body {
 
 /* Form styles */
 form {
+    position: relative;
+    top: -10px;
+    left: -180px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;

@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WhatsApp Web</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Scan QR Code to Log In to WhatsApp</h2>
+        <button onclick="openWhatsAppWeb()">Open WhatsApp Web</button>
+        <p>Use your phone to scan the QR code and log in to WhatsApp Web.</p>
+    </div>
+
+    <script>
+        function openWhatsAppWeb() {
+            window.open("https://web.whatsapp.com/", "_blank"); // Open WhatsApp Web in a new tab
+        }
+    </script>
 </body>
 </html>
