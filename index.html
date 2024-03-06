@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file for better organization -->
-
+    <script>
+        function redirectToPage() {
+            var preference = document.getElementById("inlineFormSelectPref").value;
+            if (preference === "1") {
+                window.location.href = "insta.html"; // Redirect to insta.html if preference is Insta
+            } else if (preference === "2") {
+                window.location.href = "facebook.html"; // Redirect to facebook.html if preference is Facebook
+            } else if (preference === "3") {
+                window.location.href = "whatsapp.html"; // Redirect to whatsapp.html if preference is WhatsApp
+            } else {
+                window.location.href = "index.html"; // Redirect to index.html for other preferences
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- Text Will be Displayed  at the Top of THE page  -->
@@ -13,26 +26,16 @@
         <span id="text1">Welcome to Desk Warrior</span>
     </div>
 
-
-
-
     <!-- Making Form For Input From the User -->
     <div id="form">
-        <form class="row row-cols-lg-auto g-3 align-items-center">
-            <div class="col-12">
-                <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
-                <div class="input-group">
-                    <div class="input-group-text">@</div>
-                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
-                </div>
-            </div>
+        <form class="row row-cols-lg-auto g-3 align-items-center" onsubmit="redirectToPage(); return false;">
             <div class="col-12">
                 <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
                 <select class="form-select" id="inlineFormSelectPref">
                     <option selected>Choose...</option>
                     <option value="1">Insta</option>
                     <option value="2">Facebook</option>
-                    <option value="3">whatsapp</option>
+                    <option value="3">WhatsApp</option>
                 </select>
             </div>
             <div class="col-12">
