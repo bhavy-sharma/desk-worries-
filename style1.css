@@ -1,9 +1,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://example.com/background.jpg'); /* Replace 'https://example.com/background.jpg' with the URL of your background image */
-            background-size: cover;
-            background-position: center;
+            background-color: #fafafa; /* Light gray background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -13,10 +11,10 @@
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            padding: 20px;
+            background-color: white;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Light shadow effect */
             text-align: center;
         }
 
@@ -31,7 +29,7 @@
         }
 
         button {
-            background-color: #4267B2; /* Facebook blue */
+            background-color: #405de6; /* Instagram blue */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -40,5 +38,11 @@
         }
 
         button:hover {
-            background-color: #405c91; /* Darker shade of Facebook blue on hover */
+            background-color: #3f5dc0; /* Darker shade of Instagram blue on hover */
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
         }
