@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+
+    <div class="navbar" id="navbar">
+        <a href="insta.html">Instagram</a>
+        <a href="facebook.html">Facebook</a>
+        <a href="whatsapp.html">WhatsApp</a>
+    </div>
+
     <div class="container">
         <h2>Login to Facebook</h2>
         <form>
@@ -15,5 +22,14 @@
             <button type="submit">Login</button>
         </form>
     </div>
+
+    <button id="toggleButton">Toggle Navbar</button>
+
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            document.getElementById("navbar").classList.toggle("closed");
+            document.getElementById("content").classList.toggle("closed");
+        });
+    </script>
 </body>
 </html>

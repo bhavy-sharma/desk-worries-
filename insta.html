@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
+    <div class="navbar" id="navbar">
+        <a href="insta.html">Instagram</a>
+        <a href="facebook.html">Facebook</a>
+        <a href="whatsapp.html">WhatsApp</a>
+    </div>
     <div class="container">
         <img src="insta-logo.jpeg" alt="Instagram Logo" class="logo"> <!-- Placeholder logo image, replace with actual Instagram logo image -->
         <h2>Login to Instagram</h2>
@@ -16,5 +21,13 @@
             <button type="submit">Login</button>
         </form>
     </div>
+    <button id="toggleButton">Toggle Navbar</button>
+
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            document.getElementById("navbar").classList.toggle("closed");
+            document.getElementById("content").classList.toggle("closed");
+        });
+    </script>
 </body>
 </html>

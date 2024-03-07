@@ -1,99 +1,62 @@
-/* styles.css */
-
-/* Reset default browser styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-#form{
-    bottom: 55px;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#intro {
-    position: relative;
-    bottom: 150px;
-    left: 155px;
-    text-align: center;
-    margin-bottom: 30px; /* Adjust the margin-bottom for the gap */
+.navbar {
+    background-color: #333; /* Dark background color for the navbar */
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    padding-top: 20px;
+    transition: width 0.5s; /* Smooth transition for width change */
 }
 
-#text1 {
-    color: white;
-    font-size: 50px;
-    padding: 20px;
-    margin: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, #3ab5b0, #3d99be);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    animation: text 3s 1;
-}
-
-@keyframes text {
-    0% {
-        color: black;
-        transform: scale(1);
-    }
-    30% {
-        letter-spacing: 10px;
-    }
-    85% {
-        letter-spacing: 2px;
-    }
-}
-
-/* Form styles */
-form {
-    position: relative;
-    top: -10px;
-    left: -180px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
+.navbar a {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.btn-primary {
-    background-color: #3ab5b0;
-    color: #fff;
-    border: none;
     padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #555; /* Darker background color on hover */
+}
+
+.content {
+    margin-left: 200px; /* Adjust according to the width of the navbar */
+    padding: 20px;
+    transition: margin-left 0.5s; /* Smooth transition for margin-left change */
+}
+
+.navbar.closed {
+    width: 0;
+}
+
+.content.closed {
+    margin-left: 0;
+}
+
+#toggleButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #3d99be;
+#toggleButton:hover {
+    background-color: #555;
 }

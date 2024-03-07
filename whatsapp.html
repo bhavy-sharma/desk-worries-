@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
+
+    <div class="navbar" id="navbar">
+        <a href="insta.html">Instagram</a>
+        <a href="facebook.html">Facebook</a>
+        <a href="whatsapp.html">WhatsApp</a>
+    </div>
+
     <div class="container">
         <h2>Scan QR Code to Log In to WhatsApp</h2>
         <button onclick="openWhatsAppWeb()">Open WhatsApp Web</button>
         <p>Use your phone to scan the QR code and log in to WhatsApp Web.</p>
     </div>
+    <button id="toggleButton">Toggle Navbar</button>
 
     <script>
         function openWhatsAppWeb() {
             window.open("https://web.whatsapp.com/", "_blank"); // Open WhatsApp Web in a new tab
         }
+        document.getElementById("toggleButton").addEventListener("click", function() {
+        document.getElementById("navbar").classList.toggle("closed");
+        document.getElementById("content").classList.toggle("closed");
+    });
     </script>
 </body>
 </html>

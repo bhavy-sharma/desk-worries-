@@ -12,6 +12,59 @@
             height: 100vh;
         }
 
+
+        .navbar {
+            background-color: #333; /* Dark background color for the navbar */
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+            padding-top: 20px;
+            transition: width 0.5s; /* Smooth transition for width change */
+        }
+        
+        .navbar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color: #555; /* Darker background color on hover */
+        }
+
+
+        .navbar.closed {
+            width: 0;
+        }
+
+
+        #toggleButton {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #toggleButton:hover {
+            background-color: #555;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+            text-align: center;
+        }
+
         .container {
             background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
             padding: 20px;
